@@ -15,6 +15,13 @@ public class FlowTuple
 	private int value;
 	private int brightness;
 	
+	/**
+	 * Each visible state changing is defined to be a flow tuple that contains 4 elements: [duration, mode, value, brightness]. A flow expression is a series of flow tuples.
+	 * @param duration Gradual change time or sleep time, in milliseconds, minimum value 50.
+	 * @param mode Tuple mode.
+	 * @param value RGB value when mode is COLOR, CT value when mode is COLOR_TEMPERATURE, Ignored when mode is SLEEP.
+	 * @param brightness Brightness value, -1 or 1 ~ 100. Ignored when mode is SLEEP. When this value is -1, brightness in this tuple is ignored (only color or CT change takes effect).
+	 */
 	public FlowTuple(int duration, FlowTupleMode mode, int value, int brightness) {
 		this.duration = duration;
 		this.mode = mode;

@@ -25,7 +25,22 @@ public class YeelightDevice {
 	}
 	
 	public enum ColorFlowEndAction {
-	    STAY_BEFORE(0), STAY_AFTER(1),OFF(2);
+	    
+		/**
+	     * means smart LED recover to the state before the color flow started
+	     */
+		STAY_BEFORE(0), 
+		
+		/**
+		 * means smart LED stay at the state when the flow is stopped
+		 */
+	    STAY_AFTER(1),
+	    
+	    /**
+	     * means turn off the smart LED after the flow is stopped
+	     */
+	    OFF(2);
+		
 	    private final int id;
 	    ColorFlowEndAction(int id) { this.id = id; }
 	    public int getValue() { return id; }

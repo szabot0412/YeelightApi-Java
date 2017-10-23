@@ -58,7 +58,7 @@ controller.setPower(true, Effect.SMOOTH, 500, new OnCommandListener() {
 
 Documentation currently in progress
 
-Use official Yeelight API documentation as an example
+Use official Yeelight API documentation as an example.
 Link: http://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf
 
 ## Author
